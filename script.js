@@ -1,10 +1,13 @@
-//your JS code here. If required.
- function expandPanel(panelId) {
-    // Reset all panels
-    const panels = document.querySelectorAll('.panel');
-    panels.forEach(panel => panel.classList.remove('active'));
+const panels =document.querySelectorAll('.panel')
+panels.forEach((panel) =>{
+    panel.addEventListener('click',()=>{
+        removeActiveClasses
+        panel.classList.add('active')
+    })
+})
 
-    // Expand the clicked panel
-    const clickedPanel = document.getElementById(panelId);
-    clickedPanel.classList.add('active');
-  }
+function removeActiveClasses(){
+     panels.forEach(panel=>{
+         panel.classList.remove('active')
+     })
+}
